@@ -10,14 +10,18 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+
 public class Clear extends ListenerAdapter {
+
     public boolean repeating = false;
     public static void deleteAfter(Message message, int delay) {
         message.delete().queueAfter(delay, TimeUnit.SECONDS);
     }
-
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
-        MessageUtils message = new MessageUtils(event.getMessage());
+
+        Thread EA = new Thread(() -> {
+
+            MessageUtils message = new MessageUtils(event.getMessage());
         String[] args = message.getArgs();
         if (message.startsWith("yeetusdeletus") || message.startsWith("clear") || message.startsWith("purge")
                 || message.startsWith("mymom")) {
@@ -66,5 +70,8 @@ public class Clear extends ListenerAdapter {
                     }
                 }
             }
-        }
+        }        });
+        EA.run();
+
+
     }}

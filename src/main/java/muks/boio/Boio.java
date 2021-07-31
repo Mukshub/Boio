@@ -28,7 +28,7 @@ public class Boio {
     
     public static void main(String[] args) {
         try {
-            jda = JDABuilder.createDefault("ODcwNzEwNjgzMTY2MTk1ODI0.YQQugw.jxZI8NKySQWdGgBP5SNprT7Jt1g").build();
+            jda = JDABuilder.createDefault("ODcwNzEwNjgzMTY2MTk1ODI0.YQQugw.obI9V29WMw3cpw2Vi9v-lx49u_Y").build();
             jda.getPresence().setStatus(OnlineStatus.IDLE);
             jda.getPresence().setActivity(Activity.playing("getting coded on"));
             jda.addEventListener(new Cummands(), new Clear());
