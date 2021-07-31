@@ -84,6 +84,13 @@ public class Cummands extends ListenerAdapter {
                     event.getChannel().sendMessage("My prefix is:" + Boio.prefix).queue();
                 }
             }
+            if (message.startsWith("kick")) {
+                event.getMember().kick().queue();
+            }
+
+            if (message.startsWith("t1t")) {
+                event.getChannel().sendMessage("yes I'm here");
+            }
         });
         fukingDoJobThread.run();
     }
