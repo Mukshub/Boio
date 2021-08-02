@@ -63,18 +63,17 @@ public class Cummands extends ListenerAdapter {
             }// r u omging? // QUICK NOW IS MY CHANCE
             // no im sadg
             if (message.startsWith("halp")) {
-                event.getChannel().sendTyping().queue();
                 EmbedBuilder halp = new EmbedBuilder();
                 halp.setTitle("Commands for Boio Bot");
-                halp.addField("Prefix", "^", false);
-                halp.addField("Boio Lore", "lore", false);
-                halp.addField("racizme", "boio", false);
-                halp.addField("minimogus", "mini", false);
-                halp.addField("Credits", "credits", false);
-                halp.setTitle("Extras:");
-                halp.setDescription("these don't require Prefixes");
-                halp.addField("sus", "@Boio", false);
+                halp.addField("lore", "", false);
+                halp.addField("boio", "", false);
+                halp.addField("mini", "", false);
+                halp.addField("credits", "", false);
+                halp.addField("Extras", "these don't require Prefixes:", false);
+                halp.addField("sus", "", false);
+                halp.addField("@BOIO", "", false);
                 halp.setColor(0xb3bdb5);
+                event.getChannel().sendTyping().queue();
                 event.getChannel().sendMessage(halp.build()).queue();
             }
             java.util.List<Member> mentionedMembers = message.getMessage().getMentionedMembers();
@@ -85,8 +84,53 @@ public class Cummands extends ListenerAdapter {
                 }
             }
             if (message.startsWith("t1t")) {
-                event.getChannel().sendMessage("yes I'm here");
+                event.getChannel().sendTyping().queue();
+                event.getChannel().sendMessage("yes I'm here").queue();
             }
+if (message.containsAt("ez", 0)) {
+    event.getChannel().sendTyping().queue();
+    event.getChannel().sendMessage("didn't ask lol").queue();
+}
+            if (message.containsAt("ezzzzzzzz", 0)) {
+                event.getChannel().sendTyping().queue();
+                event.getChannel().sendMessage("didn't ask lol").queue();
+            }
+            if (message.containsAt("eeeeez", 0)) {
+                event.getChannel().sendTyping().queue();
+                event.getChannel().sendMessage("didn't ask lol").queue();
+            }
+            if (message.containsAt("eeeeeezzz", 0)) {
+                event.getChannel().sendTyping().queue();
+                event.getChannel().sendMessage("didn't ask lol").queue();
+            }
+            if (message.containsAt("eez", 0)) {
+                event.getChannel().sendTyping().queue();
+                event.getChannel().sendMessage("didn't ask lol").queue();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         });
         fukingDoJobThread.run();
     }
